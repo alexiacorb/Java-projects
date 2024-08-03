@@ -1,0 +1,20 @@
+
+public class Main
+{
+	public static void main(String[] args) {
+	    String default_color = "\u001B[0m";
+        String red = "\u001B[31m";
+        String green = "\u001B[32m";
+        String blue = "\u001B[34m";
+        
+        System.out.println("---------------------------------------");
+        System.out.println( green +" WELCOME TO THE CALCULATOR APPLICATION\n"+ default_color);
+        System.out.println("---------------------------------------");
+
+        System.out.println("You can use the following operations: \n");
+        
+        System.out.println("Addition");
+
+	}
+}
+
