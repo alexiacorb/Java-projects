@@ -1,4 +1,4 @@
-
+import java.util.Scanner;
 public class Main
 {
 	public static void main(String[] args) {
@@ -7,13 +7,31 @@ public class Main
         String green = "\u001B[32m";
         String blue = "\u001B[34m";
         
-        System.out.println("---------------------------------------");
-        System.out.println( green +" WELCOME TO THE CALCULATOR APPLICATION\n"+ default_color);
-        System.out.println("---------------------------------------");
-
-        System.out.println("You can use the following operations: \n");
+        System.out.println("---------------------------------------\n"+green +" WELCOME TO THE CALCULATOR APPLICATION"+ default_color);
+        System.out.println("---------------------------------------\n"+"You can use the following operations: ");
         
-        System.out.println("Addition");
+        System.out.println("1. Addition ("+ red + "+"+default_color+")");
+        System.out.println("2. Subtraction ("+ red + "-" +default_color+")");
+        System.out.println("3. Multiplication ("+ red + "*" +default_color+")");
+        System.out.println("4. Division ("+ red + "/" +default_color+")");
+        System.out.println("5. Pow ("+ red + "^" +default_color+")");
+        
+        System.out.println("Choose the first number(integer): ");
+        Scanner scanner=new Scanner(System.in);
+        int x=scanner.nextInt();
+        System.out.println("Choose the operator: ");
+        String operator=scanner.next();
+        System.out.println("Choose the second number(integer): ");
+        int y=scanner.nextInt();
+        
+        int rez=0;
+        switch(operator){
+            case "+":
+                rez=x+y;
+                System.out.println("The result of the addition: "+x+"+"+y+"="+rez);
+        }
+        
+        
 
 	}
 }
