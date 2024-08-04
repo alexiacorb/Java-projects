@@ -16,6 +16,8 @@ public class Main
         System.out.println("4. Division ("+ red + "/" +default_color+")");
         System.out.println("5. Pow ("+ red + "^" +default_color+")");
         
+        System.out.println("---------------------------------------\n");
+        
         System.out.println("Choose the first number(integer): ");
         Scanner scanner=new Scanner(System.in);
         int x=scanner.nextInt();
@@ -24,11 +26,41 @@ public class Main
         System.out.println("Choose the second number(integer): ");
         int y=scanner.nextInt();
         
+        System.out.println("---------------------------------------\n");
+
+        
         int rez=0;
         switch(operator){
             case "+":
                 rez=x+y;
-                System.out.println("The result of the addition: "+x+"+"+y+"="+rez);
+                System.out.println(blue+"The result of the addition: "+red+x+"+"+y+"="+rez+default_color);
+                break;
+            case "-":
+                rez=x-y;
+                System.out.println(blue+"The result of the subsraction: "+red+x+"-"+y+"="+rez+default_color);
+                break;
+            case "*":
+                rez=x*y;
+                System.out.println(blue+"The result of the multiplication: "+red+x+"*"+y+"="+rez+default_color);
+                break;
+        
+            case "/":
+                rez=x/y;
+                System.out.println(blue+"The result of the division: "+red+x+"/"+y+"="+rez+default_color);
+                break;
+            case "^":
+                rez=1;
+                int copy=y;
+                while(copy!=0){
+                    rez=rez*x;
+                    y--;
+                }
+                System.out.println(blue+"The result of the pow: "+red+x+"^"+y+"="+rez+default_color);
+                break;
+             default:
+                System.out.println(red + "Invalid operator!" + default_color);
+                return;
+                
         }
         
         
