@@ -1,6 +1,6 @@
-import java.awt.Color;
+import java.awt.Color;    ////folosim pentru a adauga culori de fundal ferestrei calculatorului 
 
-import javax.swing.JFrame;
+import javax.swing.JFrame;         
 import javax.swing.SwingUtilities;
 
 
