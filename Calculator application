@@ -1,0 +1,22 @@
+import java.awt.Color;
+
+import javax.swing.JFrame;
+import javax.swing.SwingUtilities;
+
+
+public class Main{
+    public static void main(String [] args){
+        SwingUtilities.invokeLater(new Runnable(){
+            public void run(){
+                createCalculator();
+            }
+        });
+    }
+    private static void createCalculator(){
+        JFrame calculator=new JFrame("Calculator");        ///////numele atribuit ferestei 
+        calculator.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        calculator.setSize(500,400);     ////hotaraste dimensiunea ferestei calculatorullui 
+        calculator.setVisible(true);       ////asigura afisarea ferestrei 
+        calculator.getContentPane().setBackground(Color.BLACK);  /////seteaza culoarea neagra ferestei de deschidere a calculatorului
+    }
+}
