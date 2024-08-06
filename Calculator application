@@ -23,6 +23,7 @@ public class Main{
         calculator.setSize(500,400);     ////hotaraste dimensiunea ferestei calculatorullui 
         calculator.setVisible(true);       ////asigura afisarea ferestrei 
         calculator.getContentPane().setBackground(Color.BLACK);  /////seteaza culoarea neagra ferestei de deschidere a calculatorului
+        calculator.setLayout(new GridLayout(4,4));
         addButtons(calculator);
     }
     private static void addButtons(JFrame calculator){
@@ -31,15 +32,23 @@ public class Main{
         JButton two=new JButton("2");
         JButton three=new JButton("3");
         JButton four=new JButton("4");
+        JButton five=new JButton("5");
+        JButton six=new JButton("6");
+        JButton seven=new JButton("7");
+        JButton eight=new JButton("8");
+        JButton nine=new JButton("9");
 
-        calculator.add(zero);
+        calculator.add(seven);
+        calculator.add(eight);
+        calculator.add(nine);
+        calculator.add(four);
+        calculator.add(five);
+        calculator.add(six);
         calculator.add(one);
         calculator.add(two);
         calculator.add(three);
-        calculator.add(four);
-
-
-
+        
+        calculator.add(zero);
 
     }
 }
