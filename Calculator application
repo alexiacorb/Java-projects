@@ -1,6 +1,10 @@
-import java.awt.Color;    ////folosim pentru a adauga culori de fundal ferestrei calculatorului 
 
-import javax.swing.JFrame;         
+import javax.swing.JButton;
+import javax.swing.JFrame;  ///pentru a crea identitatea vizuala a aplicatiei 
+import java.awt.Color;///pentru a adauga culori de fundal 
+import java.awt.GridLayout;  ////pentru a permite afisarea mai multor butoane simultan 
+
+
 import javax.swing.SwingUtilities;
 
 
@@ -10,6 +14,7 @@ public class Main{
             public void run(){
                 createCalculator();
             }
+
         });
     }
     private static void createCalculator(){
@@ -18,5 +23,23 @@ public class Main{
         calculator.setSize(500,400);     ////hotaraste dimensiunea ferestei calculatorullui 
         calculator.setVisible(true);       ////asigura afisarea ferestrei 
         calculator.getContentPane().setBackground(Color.BLACK);  /////seteaza culoarea neagra ferestei de deschidere a calculatorului
+        addButtons(calculator);
+    }
+    private static void addButtons(JFrame calculator){
+        JButton zero=new JButton("0");
+        JButton one=new JButton("1");
+        JButton two=new JButton("2");
+        JButton three=new JButton("3");
+        JButton four=new JButton("4");
+
+        calculator.add(zero);
+        calculator.add(one);
+        calculator.add(two);
+        calculator.add(three);
+        calculator.add(four);
+
+
+
+
     }
 }
